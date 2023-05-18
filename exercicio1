@@ -1,0 +1,26 @@
+print ('Iremos calcular o fatorial dos numeros inteiros \nPor favor, digite um numero inteiro, valor maximo = 50')
+
+def valida_int(pergunta, min, max):
+  x = int (input(pergunta))
+  while ((x < min) or (x > max)):
+    x = int (input(pergunta))
+  return x
+
+def fatorial(num):
+
+  """
+  :param num: Função para calcular o fatorial de um numero
+  :return: Valor retornado
+  """
+
+  fat = 1
+  if num == 0:
+    return fat
+
+  for i in range (1, num+1, 1):
+    fat *= i #fat recebe ela mesma x(vezes) i
+  return fat
+
+#Programa principal
+x = valida_int ('digite um numero para calcular a fatorial: ', 0, 50)
+print ('Fatorial de {}! Deu {}'.format(x, fatorial(x)))
