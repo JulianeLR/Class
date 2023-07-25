@@ -1,0 +1,33 @@
+print ('Calculadora')
+print ('ADIÇÃO DIGITE: +')
+print ('SUBTRAÇÃO DIGITE: -')
+print ('MULTIPLICAÇÃO DIGITE: *')
+print ('DIVISÃO DIGITE: /')
+
+op = input('Qual operação deseja fazer? ')
+if op == '+' or op == '-' or op == '*' or op == '/':
+  A = int (input('Digite o primeiro numero: '))
+  B = int (input('Digite o valor do segundo numero: '))
+
+while (op != 'sair'):
+  if (op == '+'):
+    res = A + B
+    print ('{} + {} = {}'.format(A, B, res))
+  elif (op == '-'):
+    res = A - B
+    print ('{} - {} = {}'.format(A, B, res))
+  elif (op == '*'):
+    res = A * B
+    print ('{} * {} = {}'.format(A, B, res))
+  elif (op == '/'):
+    res = A / B 
+    print ('{} / {} = {}'.format(A, B, res))
+  else:
+    print ('Você é burro, escolha a operação correta')
+
+  op = input('Qual operação deseja fazer? ')
+  if op == '+' or op == '-' or op == '*' or op == '/':
+    A = int (input('Digite o primeiro numero: '))
+    B = int (input('Digite o valor do segundo numero: '))
+
+print ('encerrando o programa')  
